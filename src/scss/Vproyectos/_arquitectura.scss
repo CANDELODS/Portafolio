@@ -13,7 +13,7 @@
         &{
             text-align: center;
             font-size: 3rem;
-            color: v.$blanco;
+            color: v.$titulosVproyectos;
             border-top: 2px solid v.$cafe-opaco;
             margin: 4rem 0 4rem 0;
             padding: 4rem 0 0 0;
@@ -52,10 +52,8 @@
             cursor: pointer;
         }
         &--activo{
-            // background: #4760bd14;
             background: rgb(181 143 73 / 8%);
             box-shadow: 0px 0px 15px v.$naraja;
-            // box-shadow: 0px 0px 15px v.$azul;
             border: 1px solid gray;
             animation: pulso-sombra 2s infinite;
         }
@@ -76,7 +74,7 @@
     &__nombre{
         @include m.formatearParrafo;
         margin-bottom: .5rem;
-        color: v.$naranja-opaco;
+        color: v.$principal;
     }
 
     &__descripcion{

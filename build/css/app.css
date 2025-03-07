@@ -422,7 +422,7 @@ template {
   color: #ff9900;
   margin: 2.5rem 0 2.5rem 0.4rem;
   text-align: left;
-  background: -webkit-linear-gradient(318deg, #97692e, #ffca46, #ffec6c, #994b00, #732100);
+  background: -webkit-linear-gradient(273deg, #97692e, #ffca46, #ffec6c, #994b00, #732100);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1041,6 +1041,7 @@ template {
 }
 .Vproyectos__titulo {
   animation: revelar 1s linear both;
+  color: #ffca46;
 }
 .Vproyectos__grid {
   animation: revelar 1s linear both;
@@ -1347,6 +1348,7 @@ template {
 .tecnologias__titulo {
   text-align: center;
   margin: 0 0 4rem 0;
+  color: #ffca46;
 }
 .tecnologias__grid {
   display: grid;
@@ -1426,7 +1428,7 @@ template {
 .arquitectura__titulo {
   text-align: center;
   font-size: 3rem;
-  color: #FFFFFF;
+  color: #ffca46;
   border-top: 2px solid #554B39;
   margin: 4rem 0 4rem 0;
   padding: 4rem 0 0 0;
@@ -1491,7 +1493,7 @@ template {
   margin: 0;
   padding: 0;
   margin-bottom: 0.5rem;
-  color: #D59723;
+  color: #ff9900;
 }
 .arquitectura__descripcion {
   margin: 0;

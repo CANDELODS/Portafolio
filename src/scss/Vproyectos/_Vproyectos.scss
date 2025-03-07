@@ -15,6 +15,7 @@
         @include m.textoFluido(2rem, 3.6rem);
         &{
             animation: revelar 1s linear both;
+            color: v.$titulosVproyectos;
         }
     }
 
