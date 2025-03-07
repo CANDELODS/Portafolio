@@ -1,0 +1,163 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 5rem 0;
+
+    @include m.tablet {
+        margin: 2rem 0 0 0;
+        position: fixed;
+        top: 1.5rem;
+        width: 94%;
+        z-index: 10;
+        animation: header linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 500px;
+        &--proyectos{
+            animation: none;
+        }
+    }
+
+    &--proyectos{
+        margin: 2rem 0 2rem 0;
+        position: relative;
+    }
+
+    &__logo{
+        color: v.$naraja;
+        font-weight: bold;
+        padding: 1rem;
+        animation: cambiarColorEnlace linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 500px;
+
+        position: relative;
+        transition: all 0.5s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 9px;
+            left: 7px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, v.$blanco, v.$naraja, v.$naraja);
+            animation: cambiarColorBefore linear both;
+            animation-timeline: scroll(root);
+            animation-range: 0 500px;
+            z-index: 1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+        }
+
+        &:hover {
+            color: v.$naraja;
+        }
+    }
+
+    &__span{
+        color: v.$cafe-claro;
+        font-size: 1.4rem;
+        animation: cambiarColorEnlace linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 500px;
+    }
+
+    &__derecha{
+        display: none;
+        @include m.tablet {
+            display: flex;
+            gap: 3rem;
+        }
+
+        &.activa{
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            gap: 4rem;
+            z-index: 3;
+            transition: all 500ms ease;
+        }
+
+        &.oculta{
+            display: none;
+            transition: all 500ms ease;
+
+        }
+    }
+
+    &__enlace{
+        color: v.$azulCielo;
+        font-weight: 500;
+
+        @include m.tablet{
+
+            position: relative;
+            transition: all 0.5s ease;
+            animation: cambiarColorEnlace linear both;
+            animation-timeline: scroll(root);
+            animation-range: 0 500px;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(to right, v.$naraja, v.$naraja, v.$azulCielo);
+                animation: cambiarColorBefore linear both;
+                animation-timeline: scroll(root);
+                animation-range: 0 500px;
+                z-index: 1;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+            &:hover::before {
+                transform: scaleX(1);
+            }
+    
+            &:hover {
+                color: v.$naraja;
+            }
+        }
+
+        &:nth-child(4) {
+            @include m.tablet{
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    &__movil{
+        color: v.$blanco;
+        padding-right: 1rem;
+        transition: all 500ms ease;
+        @include m.tablet {
+            display: none;
+        }
+    }
+
+    &__menu{
+        font-size: 3.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

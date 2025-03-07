@@ -1,0 +1,44 @@
+@use 'variables' as v;
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.8rem;
+    // background-color: black;
+    min-height: 100vh; /* Asegura que el fondo cubra la pantalla completa */
+    background-color: hsla(53, 0%, 9%, 1);
+    background-image: radial-gradient(circle at 40% 20%, hsla(81, 0%, 9%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 0%, hsla(53, 0%, 16%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 0% 50%, hsla(173, 0%, 9%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 50%, hsla(33, 0%, 0%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 0% 100%, hsla(53, 0%, 14%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 100%, hsla(294, 0%, 0%, 1) 0%, transparent 50%),
+                      radial-gradient(circle at 0% 0%, hsla(53, 0%, 18%, 1) 0%, transparent 50%);
+    background-blend-mode: normal, normal, normal, normal, normal, normal, normal;
+    background-size: cover; /* Asegura que el background cubra toda el área disponible */
+    background-attachment: fixed; /* Para que el fondo se mantenga al hacer scroll */
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

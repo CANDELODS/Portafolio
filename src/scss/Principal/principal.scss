@@ -1,0 +1,185 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.principal {
+    @include m.contenedorSm;
+
+    @include m.tablet {
+        @include m.contenedor;
+    }
+
+    & {
+        text-align: center;
+    }
+
+    &__grid {
+        @include m.grid(1, 1rem);
+        justify-items: center;
+        align-items: center;
+
+        @include m.tablet {
+            @include m.grid(2, 1rem);
+            margin-top: 4rem;
+        }
+
+        &-parrafo {
+            @include m.formatearParrafo;
+            @include m.centrarTexto;
+            @include m.textoFluido(4.5rem, 5.5rem);
+
+            & {
+                color: v.$gris-blanco;
+                text-align: left
+            }
+
+            &--ids {
+                @include m.formatearParrafo;
+                @include m.centrarTexto;
+                @include m.textoFluido(2.5rem, 3.5rem);
+
+                & {
+                    text-align: left;
+                    margin-bottom: 2.5rem;
+                }
+
+                @include m.tablet {
+                    margin-bottom: 1.5rem;
+                    font-size: 3rem;
+                }
+            }
+
+            &--anim::before {
+                content: 'Ingeniero De Sistemas';
+                color: v.$blanco;
+                animation: letras 20s infinite;
+            }
+
+            &--anim::after {
+                content: '';
+                background-color: hsl(0deg 0% 10.38%);
+                position: absolute;
+                width: calc(100% + 1rem);
+                height: 100%;
+                border-left: 3px solid hsla(53, 0%, 9%, 1);
+                right: -8px;
+                animation: cursor 0.6s infinite,
+                    escribiendo 20s steps(14) infinite;
+            }
+
+            &--anim {
+                position: relative;
+            }
+        }
+
+        &-h1 {
+            @include m.centrarTexto;
+            @include m.textoFluido(5.5rem, 7.5rem);
+
+            & {
+                font-size: 5rem;
+                color: v.$principal;
+                margin: 2.5rem 0 2.5rem .4rem;
+                text-align: left;
+                // background: linear-gradient(to right, #97692e, #ffca46, #ffec6c, #994b00, #732100);
+                // background: -webkit-linear-gradient(90deg, #97692e,#ffca46,#ffec6c,#994b00,#732100);
+                background: -webkit-linear-gradient(318deg, #97692e,#ffca46,#ffec6c,#994b00,#732100);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            @include m.tablet {
+                margin: 1.5rem 0 1.5rem .4rem;
+            }
+        }
+
+    }
+
+    &__izquierda {
+        height: 100%;
+        margin: 4rem 0 0 0;
+        animation: entradaIzquierda 1.5s backwards;
+
+        @include m.tablet {
+            height: inherit;
+        }
+    }
+
+    &__descripcion {
+        @include m.formatearParrafo;
+        @include m.centrarTexto;
+        @include m.textoFluido(1rem, 1.4rem);
+
+        & {
+            color: v.$gris-blanco;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        @include m.tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__flexBtn{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+
+        @include m.tablet{
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+
+    &__boton {
+        @include m.boton(v.$principal, v.$blanco);
+        margin: 2rem 19rem 0 0;
+        width: 50%;
+        border-radius: 5rem;
+        border: 2px solid transparent;
+        transition: border, box-shadow, background-color 0.5s ease;
+
+        &:hover {
+            border: 2px solid v.$principal;
+            box-shadow: 0 0 10px v.$principal;
+            background-color: transparent;
+        }
+
+        &--cv{
+            @include m.boton(v.$blanco, v.$negro);
+            width: 50%;
+            border: 2px solid transparent;
+            transition: border, box-shadow, color, background-color 0.5s ease;
+
+            &:hover {
+                border: 2px solid v.$blanco;
+                box-shadow: 0 0 10px v.$blanco;
+                color: v.$blanco;
+                background-color: transparent;
+            }
+        }
+
+        @include m.tablet {
+            margin: 3rem 0 0 0;
+        }
+    }
+
+    &__img {
+        width: 24rem;
+        // background-size: 24rem;
+        // background-image: image-set(
+        //     url(../../../build/img/bg_1.avif) 1x,
+        //     url(../../../build/img/bg_1.webp) 1x,
+        //     url(../../../build/img/bg_1.png) 1x,
+        // );
+        // background-position: center center;
+        // background-repeat: no-repeat;
+        animation: imagenEntrando 2s backwards,
+            imagenFlotando 2s infinite 2s alternate;
+
+        @include m.tablet {
+            width: 34rem;
+            background-size: 34rem;
+        }
+    }
+}

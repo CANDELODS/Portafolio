@@ -1,0 +1,87 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.arquitectura{
+    @include m.contenedorSm;
+    color: v.$blanco;
+    margin-bottom: 5rem;
+    animation: revelar linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 20%;
+    &__titulo{
+        @include m.textoFluido(1.7rem, 2.7rem);
+        &{
+            text-align: center;
+            font-size: 3rem;
+            color: v.$blanco;
+            border-top: 2px solid v.$cafe-opaco;
+            margin: 4rem 0 4rem 0;
+            padding: 4rem 0 0 0;
+        }
+    }
+
+    &__grid{
+        @include m.grid(1, 3rem);
+
+        @include m.tablet{
+            @include m.grid(2, 3rem);
+        }
+
+        @include m.desktop{
+            @include m.grid(3, 3rem);
+        }
+
+        @include m.xl-desktop{
+            @include m.grid(3, 3rem);
+        }
+
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        line-height: 1.2;
+        padding: 1.5rem 1rem 1rem 2rem;
+        border: 0px solid v.$cafe-opaco;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 5px v.$cafe-opaco;
+        transition: background 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+        
+        &:hover{
+            cursor: pointer;
+        }
+        &--activo{
+            // background: #4760bd14;
+            background: rgb(181 143 73 / 8%);
+            box-shadow: 0px 0px 15px v.$naraja;
+            // box-shadow: 0px 0px 15px v.$azul;
+            border: 1px solid gray;
+            animation: pulso-sombra 2s infinite;
+        }
+
+        @include m.tablet{
+            &--column1{
+                grid-column: 1 / -1;
+            }
+        }
+        
+        @include m.desktop{            
+            &--column1{
+                grid-column: 2 / 3;
+            }
+        }
+    }
+
+    &__nombre{
+        @include m.formatearParrafo;
+        margin-bottom: .5rem;
+        color: v.$naranja-opaco;
+    }
+
+    &__descripcion{
+        @include m.formatearParrafo;
+        font-size: 1.6rem;
+    }
+
+}

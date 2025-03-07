@@ -1,0 +1,89 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+@mixin xl-tablet {
+    @media (min-width: v.$xl-tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin xl_desktop {
+    @media (min-width: v.$xl_desktop) {
+        @content;
+    }
+}
+
+@mixin boton($bgColor, $colorTexto) {
+    background-color: $bgColor;
+    padding: 1.5rem 4rem;
+    color: $colorTexto;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+
+    &:hover {
+        background-color: adjust( $bgColor, -10% );
+        cursor: pointer;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin contenedor{
+    //Si El Contenido Puede Medir 140 Rem Lo Hará, De Lo Contrario Ocupará El 95% De La Pantalla
+    //Es Lo Mismo Que Tener max-width: 140rem; y width: 95%; Pero En Una Sola Linea
+    width: min(95%, 140rem);
+    margin: 0 auto;
+}
+
+@mixin contenedorSm{
+    //Si El Contenido Puede Medir 140 Rem Lo Hará, De Lo Contrario Ocupará El 95% De La Pantalla
+    //Es Lo Mismo Que Tener max-width: 140rem; y width: 95%; Pero En Una Sola Linea
+    width: min(90%, 140rem);
+    margin: 0 auto;
+}
+
+@mixin formatearParrafo{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin centrarTexto{
+    text-align: center;
+}
+
+@mixin textoFluido($min, $max) {
+    // El Valor De En Medio Es El Que No Aplica Ni En $Min Ni $Max Sin Embargo Será El Más Común (Valor Deseado)
+    & {
+        font-size: clamp($min, -0.8rem + 10vw, $max);
+    }
+}
+
+@mixin resetear-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

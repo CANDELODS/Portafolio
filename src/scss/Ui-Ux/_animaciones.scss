@@ -1,0 +1,178 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+//ANIMACIONES NAVEGACIÓN
+
+//Animación para el header y navegación, se activa al hacer scroll y cambia diferentes estilos para no interferir
+//Con la visualización de la página; Se usa en la página index.html
+@keyframes header {
+    to {
+        background-color: rgb(255, 255, 255, .4);
+        backdrop-filter: blur(5px);
+        font-size: 2rem;
+        top: -2rem;
+        border-radius: 0 0 .5rem .5rem;
+        color: black;
+    }
+}
+
+//Animación para complementar la animación del header, también se activa al hacer scroll y cambia el color del
+//Enlace y del logo; Se usa en la página _navegacion.scss
+@keyframes cambiarColorEnlace {
+    to {
+        color: black;
+    }
+}
+
+//Animación para complementar la animación del header, también se activa al hacer scroll y cambia el color del
+//Pseudoelemento Before en el enlace y en el logo; Se usa en la página _navegacion.scss
+@keyframes cambiarColorBefore {
+    to {
+        background: linear-gradient(to right, #000000, #000000, #EAF6FF);
+    }
+}
+
+//FIN ANIMACIONES NAVEGACIÓN
+
+//ANIMACIONES SECCIONES
+
+//Animacion para mostrar las secciones de la página principal (Index.html), se activa al hacer scroll y
+//Cambia la opacidad para hacer un efecto de revelación; Se usa en las páginas
+//_sobremi.scss, _proyectos.scss, _contacto.scss, _Vproyectos.scss, _tecnologias.scss, _arquitectura.scss
+@keyframes revelar {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+//FIN ANIMACIONES SECCIONES
+
+
+//ANIMACIONES DE ENTRADA EN LA PÁGINA PRINCIPAL
+
+//Animación para hacer flotar la imagen que se muestra en el inicio de la página index.html,
+//Se activa al cargar la pagina; Se usa en la página _principal.scss
+@keyframes imagenFlotando {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-35px);
+    }
+}
+
+
+//Animación para complementar la animación de imagenFlotando, se activa primero y hace aparecer la imagen
+//Escalando su tamaño; Se usa en la página _principal.scss
+@keyframes imagenEntrando {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+//Animación para hacer aparecer el texto introductorio de la página index.html desde la izquierda,
+//Se activa al cargar la página; Se usa en la página _principal.scss
+@keyframes entradaIzquierda {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+//Animación para hacer cambiar el texto introductorio de la página index.html,
+//Se activa al cargar la página; Se usa en la página _principal.scss
+@keyframes letras {
+
+    0%,
+    20% {
+        content: 'Systems Engineer';
+    }
+
+    21%,
+    40% {
+        content: 'Desarrollador Web';
+    }
+
+    41%,
+    60% {
+        content: 'Web Developer';
+    }
+
+    61%,
+    80% {
+        content: 'Portafolio Web';
+    }
+}
+
+//Animación que complementa la animación de letras, hace parecer que se está escribiendo el texto,
+//Se activa al cargar la página; Se usa en la página _principal.scss
+@keyframes escribiendo {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 1rem);
+    }
+}
+
+
+//Animación para crear un cursor parpadeante en la página index.html, es un complemento de la animación letras
+//Y escribiendo, se activa al cargar la página; Se usa en la página _principal.scss
+@keyframes cursor {
+    to {
+        border-left: 2px solid v.$naraja;
+    }
+}
+
+
+//FIN ANIMACIONES DE ENTRADA EN LA PÁGINA PRINCIPAL
+
+//ANIMACIONES PARA LA VISTA INDIVIDUAL DE LOS PROYECTOS
+
+//Animación para hacer una especie de parpadeo en las cards de la sección arqitectura en las páginas de los
+//Proyectos por separado, se activa al hacer click en cada card y se desactiva al hacer click en otra card
+//O en la misma; Se usa en la página _Vproyectos.scss
+@keyframes pulso-sombra {
+    0% {
+      box-shadow: 0px 0px 15px #FFA40040;
+    }
+    50% {
+      box-shadow: 0px 0px 30px #FFA40060;
+    }
+    100% {
+      box-shadow: 0px 0px 15px #FFA40040;
+    }
+
+  }
+
+//FIN ANIMACIONES PARA LA VISTA INDIVIDUAL DE LOS PROYECTOS

@@ -1,0 +1,95 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tecnologias {
+    @include m.contenedorSm;
+    color: v.$blanco;
+    animation: revelar linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 20%;
+    @include m.tablet{
+        margin-bottom: 5rem;
+    }
+    
+    &__titulo {
+        @include m.textoFluido(1.7rem, 2.7rem);
+
+        & {
+            text-align: center;
+            margin: 0 0 4rem 0;
+        }
+
+    }
+
+    &__grid {
+        @include m.grid(2, 1rem);
+        justify-items: center;
+        align-items: center;
+
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(4, 0fr);
+            justify-content: center;
+
+        }
+    }
+
+    &__card {
+        border-radius: .5rem;
+        perspective: 2000px;
+        width: 11rem;
+        height: 13rem;
+
+        &:hover &-dentro {
+            transform: rotateY(-180deg);
+        }
+    }
+
+    &__card-dentro {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: all 500ms cubic-bezier(.1, .22, .8, 1.13);
+        transform-style: preserve-3d; //Los elementos Frente y Atras permanezcan en el espacio 3d de __card-dentro
+    }
+
+    &__frente,
+    &__atras {
+        position: absolute; //Las Caras Quedarán en el mismo lugar
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; //Ocultamos la cara trasera de la card
+    }
+
+    &__frente {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background-color: #323a4775;
+        background: rgb(71 65 50 / 46%);
+        border-radius: .5rem;
+    }
+
+    &__atras {
+        text-align: center;
+        display: grid;
+        place-items: center;
+        transform: rotateY(180deg);
+        // background-color: #323a4775;
+        background: rgb(71 65 50 / 46%);
+        border-radius: .5rem;
+    }
+
+    &__i {
+        font-size: 7.5rem;
+    }
+
+    &__nombre {
+        @include m.formatearParrafo;
+    }
+
+    &__img {
+        color: v.$blanco;
+        width: 7.5rem;
+    }
+}

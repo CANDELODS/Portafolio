@@ -1,0 +1,28 @@
+{
+  "name": "portafolio-web",
+  "version": "1.0.0",
+  "description": "Portafolio web en el cual estarán mis proyectos",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:build/css",
+    "dev": "gulp"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "GULP",
+    "JS",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Juan Sebastian Candelo Balanta",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^11.0.1",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.0",
+    "sass": "^1.83.4",
+    "sharp": "^0.33.5"
+  }
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Proyecto App Salón</title>
+</head>
+
+<body>
+    <!-- VProyectos-->
+    <section class="Vproyectos" id="Vproyectos">
+        <header class="Vproyectos__header">
+            <nav class="navegacion navegacion--proyectos">
+                <a href="index.html" class="navegacion__logo">
+                    Jc<br>
+                    <span class="navegacion__span">Portafolio</span>
+                </a>
+
+                <div class="navegacion__derecha">
+                    <a class="navegacion__enlace" href="#Vproyectos">Inicio</a>
+                    <a class="navegacion__enlace" href="#tecnologias">Tecnologías</a>
+                    <a class="navegacion__enlace" href="#arquitectura">Arquitectura</a>
+                </div>
+                
+                <div class="navegacion__movil">
+                    <i id="mobile-menu" class="fa-solid fa-bars navegacion__menu"></i>
+                </div>
+            </nav>
+        </header>
+
+        <h1 class="Vproyectos__titulo">App Salón</h1>
+
+        <div class="Vproyectos__grid">
+
+            <div class="Vproyectos__img-arriba">
+                <picture>
+                    <source srcset="build/img/AppSalonInicio.avif" type="image/avif">
+                    <source srcset="build/img/AppSalonInicio.webp" type="image/webp">
+                    <img loading="lazy" width="200" height="300" class="Vproyectos__img Vproyectos__img--arriba" src="build/img/AppSalonInicio.png"
+                        alt="Proyecto App Salón">
+                </picture>
+                <p class="Vproyectos__click"><b>Haz Click En Las Imágenes Para Verlas Más Grandes</b></p>
+            </div>
+
+            <div class="Vproyectos__img-medioi">
+                <picture>
+                    <source srcset="build/img/AppSalonServicios.avif" type="image/avif">
+                    <source srcset="build/img/AppSalonServicios.webp" type="image/webp">
+                    <img loading="lazy" width="200" height="300" class="Vproyectos__img Vproyectos__img--medioi" src="build/img/AppSalonServicios.png"
+                        alt="Proyecto App Salón">
+                </picture>
+            </div>
+
+            <div class="Vproyectos__img-mediod">
+                <picture>
+                    <source srcset="build/img/AppSalonDatosCita.avif" type="image/avif">
+                    <source srcset="build/img/AppSalonDatosCita.webp" type="image/webp">
+                    <img loading="lazy" width="200" height="300" class="Vproyectos__img Vproyectos__img--mediod" src="build/img/AppSalonDatosCita.png"
+                        alt="Proyecto App Salón">
+                </picture>
+            </div>
+
+            <div class="Vproyectos__img-abajod">
+                <picture>
+                    <source srcset="build/img/AppSalonCita.avif" type="image/avif">
+                    <source srcset="build/img/AppSalonCita.webp" type="image/webp">
+                    <img loading="lazy" width="200" height="300" class="Vproyectos__img Vproyectos__img--abajod" src="build/img/AppSalonCita.png"
+                        alt="Proyecto App Salón">
+                </picture>
+            </div>
+            
+            <div class="Vproyectos__descripcion">
+                <p class="Vproyectos__texto">Este sitio web es perfecto para negocios como barberías
+                    y salones de belleza, selecciona los servicios que quieres, llena el formulario
+                    con tu nombre, fecha de cuando quieres el servicio y la hora,
+                    revisa bien la información diligenciada y reserva tu cita.
+                    El área de administración permite editar, borrar y crear servicios,
+                    además de ver las citas que han apartado los usuarios.</p>
+                </div>
+                
+            </div> <!-- Fin de la clase Vproyectos__grid -->
+
+            <div class="Vproyectos__ver-proyecto">
+                <div class="Vproyectos__credenciales-flex">
+                    <p class="Vproyectos__credenciales-user">Email de prueba: <b>juancandelods@gmail.com</b></p>
+                    <p class="Vproyectos__credenciales-password">Contraseña de prueba: <b>12345678</b></p>
+                </div>
+                <a href="https://appsalon-phpmvc-juancandelo.mnz.dom.my.id/" class="Vproyectos__btn-ver"
+                target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                <a href="https://github.com/CANDELODS/AppSalon_MVC_PHP" class="Vproyectos__btn-ver Vproyectos__btn-ver--github"
+                target="_blank" rel="noopener noreferrer">Ver en Github <i class="fa-brands fa-github"></i></a>
+            </div>
+    </section> <!--Fin VProyectos-->
+
+
+    <!-- Tecnologías -->
+    <section>
+
+        <aside class="tecnologias" id="tecnologias">
+            <h2 class="tecnologias__titulo">Tecnologías</h2>
+            <div class="tecnologias__grid">
+
+                <div class="tecnologias__card tecnologias__card--html">
+
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <i class="fa-brands fa-html5 tecnologias__i"></i>
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">HTML5</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tecnologias__card tecnologias__card--sass">
+
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <i class="fa-brands fa-sass tecnologias__i"></i>
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">Sass</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tecnologias__card tecnologias__card--js">
+
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <i class="fa-brands fa-js tecnologias__i"></i>
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">Java Script</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tecnologias__card tecnologias__card--php">
+
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <i class="fa-brands fa-php tecnologias__i"></i>
+
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">PHP</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tecnologias__card tecnologias__card--gulp">
+
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <i class="fa-brands fa-gulp tecnologias__i"></i>
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">Gulp</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tecnologias__card tecnologias__card--node">
+
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <i class="fa-brands fa-node-js tecnologias__i"></i>
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">Node Js</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tecnologias__card tecnologias__card--composer">
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <picture>
+                                <source srcset="build/img/composer.avif" type="image/avif">
+                                <source srcset="build/img/composer.webp" type="image/webp">
+                                <img loading="lazy" width="200" height="300" class="tecnologias__img" src="build/img/composer.png"
+                                    alt="Imagen Tecnología Composer">
+                            </picture>
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">Composer</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tecnologias__card tecnologias__card--mysql">
+
+                    <div class="tecnologias__card-dentro">
+
+                        <div class="tecnologias__frente">
+                            <picture>
+                                <source srcset="build/img/mysql.avif" type="image/avif">
+                                <source srcset="build/img/mysql.webp" type="image/webp">
+                                <img loading="lazy" width="200" height="300" class="tecnologias__img" src="build/img/mysql.png" alt="Imagen Tecnología Mysql">
+                            </picture>
+                        </div>
+                        <div class="tecnologias__atras">
+                            <p class="tecnologias__nombre">Mysql</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div> <!-- Fin .tecnologias__grid-->
+        </aside>
+
+    </section> <!-- Fin Tecnologías-->
+
+    <!-- Arquitectura -->
+    <section>
+
+        <div class="arquitectura" id="arquitectura">
+            <h2 class="arquitectura__titulo">Arquitectura</h2>
+            <div class="arquitectura__grid">
+
+                <div class="arquitectura__card">
+                    <h3 class="arquitectura__nombre">MVC</h3>
+                    <p class="arquitectura__descripcion">Patrón de arquitectura de software que nos permite la
+                        separación de obligaciones de cada parte del código, separa la lógica de la vista del proyecto.
+                    </p>
+                </div>
+
+                <div class="arquitectura__card">
+                    <h3 class="arquitectura__nombre">POO</h3>
+                    <p class="arquitectura__descripcion">La Programación Orientada a Objetos (POO) es un paradigma de desarrollo
+                        que organiza el código en objetos. Estos objetos son instancias de clases,
+                        que agrupan atributos (datos) y métodos (funciones) para representar entidades del mundo real.</p>
+                </div>
+
+                <div class="arquitectura__card">
+                    <h3 class="arquitectura__nombre">Active Record</h3>
+                    <p class="arquitectura__descripcion">Patrón de arquitectura (para los datos) usado para apps que
+                        almacenan datos en bases de datos, sobre todo cuando se usa CRUD, es el responsable de
+                        trabajar con los datos, en un MVC sería la M (Modelo).</p>
+                </div>
+
+                <div class="arquitectura__card">
+                    <h3 class="arquitectura__nombre">Router</h3>
+                    <p class="arquitectura__descripcion">Es el encargado de registrar todas las URLS o Endpoints
+                        que soporta nuestro sitio web, cuando un usuario accede a una URL el router ya sabe
+                        que controlador y modelo llamar.</p>
+                </div>
+
+                <div class="arquitectura__card">
+                    <h3 class="arquitectura__nombre">API</h3>
+                    <p class="arquitectura__descripcion">(Interfaz de Programación de Aplicaciones, por sus 
+                        siglas en inglés) es un conjunto de reglas y herramientas que permite a diferentes 
+                        aplicaciones o sistemas comunicarse entre sí, en este proyecto se creó una para
+                        poder manejar los servicios (cortes, peinados, etc) y hacer su CRUD más facil y escalable.</p>
+                </div>
+
+            </div> <!--Fin __grid-->
+
+        </div> <!--Fin .arquitectura-->
+
+    </section>
+
+    <aside class="Vproyectos__aside">
+        <p class="Vproyectos__gracias">El proyecto App salón fue hecho con el curso: 
+            <a class="Vproyectos__enlaceg" href="https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/?couponCode=24T3MT270225" target="_blank" rel="noopener noreferrer">
+            Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</a> <br>
+            de Juan Pablo De la torre Valdez
+            en Udemy. Gracias por visitar mi portafolio.
+        </p>
+    </aside>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__izquierda">
+                <p class="footer__copy">Nombre: <b>Juan Sebastian Candelo Balanta</b></p>
+                <p class="footer__ciudad">Ciudad: <b>Puerto Tejada Cauca</b></p>
+                <p class="footer__codigoPostal">Código Postal: <b>191501</b></p>
+            </div>
+
+            <div class="footer__derecha">
+                <nav class="footer__navegacion">
+                    <a class="footer__enlace" href="#Vproyectos">Inicio</a>
+                    <a class="footer__enlace" href="#tecnologias">Tecnologías</a>
+                    <a class="footer__enlace" href="#arquitectura">Arquitectura</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="build/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.Vproyectos{
+    @include m.contenedorSm;
+    @include m.tablet{
+        @include m.contenedor;
+    }
+    &{
+        color: v.$blanco;
+        text-align: center;
+    }
+
+    &__titulo{
+        @include m.textoFluido(2rem, 3.6rem);
+        &{
+            animation: revelar 1s linear both;
+        }
+    }
+
+    &__grid{
+        animation: revelar 1s linear both;
+        @include m.grid(3,2rem);
+        grid-template-rows: 40% 15% 25%;
+        grid-template-areas:
+        "arriba arriba arriba"
+        "medioi mediod abajod"
+        "texto texto texto";
+        padding: 5rem 0 0 0;
+        align-items: center; 
+
+        @include m.tablet{
+            @include m.grid(3,2rem);
+            grid-template-rows: 40% 30% 30%;
+            grid-template-areas:
+            "arriba arriba texto"
+            "medioi mediod abajod"
+            "medioi mediod abajod";
+            padding: 7rem 0 0 0;
+        }
+        
+    }
+
+    &__img-arriba{
+        grid-area: arriba;
+    }
+
+    &__img-medioi{
+        grid-area: medioi;
+    }
+
+    &__img-mediod{
+        grid-area: mediod;
+    }
+
+    &__img-abajod{
+        grid-area: abajod;
+    }
+
+    &__img{
+        border-radius: 1rem;
+        box-shadow: 0px 0px 5px v.$cafe-opaco;
+        transition: cursor, opacity 0.5s ease;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        &--arriba{
+            width: 100%;
+        }
+
+        &--medioi{
+            width: 100%;
+
+        }
+
+        &--mediod{
+            width: 100%;
+        }
+
+        &--abajod{
+            width: 100%;
+        }
+    }
+
+    &__ver-proyecto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 5rem;
+        border-top: 2px solid v.$cafe-opaco;
+        border-bottom: 2px solid v.$cafe-opaco;
+        padding-bottom: 1rem;
+        animation: revelar linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 20%;
+        @include m.tablet{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 6rem;
+        }
+    }
+
+    &__credenciales-flex{
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet{
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+    }
+
+    &__btn-ver{
+        @include m.boton(v.$principal, v.$blanco);
+        width: 35%;
+        border-radius: 1rem;
+        border: 2px solid transparent;
+        padding: 1rem 1rem; // Ajusta el padding para hacerlo más pequeño
+        font-size: 1.5rem; // Ajusta el tamaño de la fuente para hacerlo más pequeño
+        margin: .5rem 0 1rem 0;
+        transition: border, box-shadow, background-color 0.5s ease;
+
+        @include m.tablet{
+            width: 15%;
+
+        }
+        
+        @include m.xl-tablet{
+            padding: 1rem 0 1rem 0;
+            width: 15%;        
+        }
+        
+        @include m.desktop{
+            width: 15%;        
+        }
+        @include m.xl-desktop{
+            padding: 1rem 1rem;
+            width: 15%;        
+        }
+        &:hover {
+            border: 2px solid v.$principal;
+            box-shadow: 0 0 10px v.$principal;
+            background-color: transparent;
+        }
+
+        &--github{
+            @include m.boton(v.$blanco, v.$negro);
+            width: 35%;
+            border-radius: 1rem;
+            border: 2px solid transparent;
+            padding: 1rem 1rem; // Ajusta el padding para hacerlo más pequeño
+            font-size: 1.4rem; // Ajusta el tamaño de la fuente para hacerlo más pequeño
+            margin: .5rem 0 1rem 0;
+            transition: border, box-shadow, color, background-color 0.5s ease;
+
+            @include m.tablet{
+                width: 15%;
+                font-size: 1.5rem;
+    
+            }
+            
+            @include m.xl-tablet{
+                padding: 1rem 0 1rem 0;
+                width: 15%;        
+            }
+            
+            @include m.desktop{
+                width: 15%;        
+            }
+            @include m.xl-desktop{
+                padding: 1rem 1rem;
+                width: 15%;        
+            }
+
+            &:hover {
+                border: 2px solid v.$blanco;
+                box-shadow: 0 0 10px v.$blanco;
+                color: v.$blanco;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__click{
+        @include m.formatearParrafo;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        @include m.tablet{
+            display: none;
+        }
+    }
+
+    &__descripcion{
+        &{
+            text-align: justify;
+            grid-area: texto;
+        }
+       
+    }
+
+    &__texto{
+        @include m.textoFluido(.5rem, 1.4rem);
+        &{
+            line-height: 1.2;
+        }
+
+        @include m.tablet{
+            @include m.textoFluido(1rem, 1.6rem);
+            &{
+                line-height: 1.2;
+            }
+        }
+
+        @include m.desktop{
+            @include m.textoFluido(1.4rem, 1.8rem);
+            &{
+                line-height: 1.5;
+            }
+        }
+
+        @include m.xl-desktop{
+            @include m.textoFluido(1.4rem, 2rem);
+            &{
+                line-height: 1.5;
+            }
+        }
+    }
+
+    &__aside{
+        @include m.contenedorSm;
+        &{
+            color: v.$blanco;
+            text-align: left;
+        }
+    }
+
+    &__gracias{
+        font-size: 1.6rem;
+    }
+
+    &__enlaceg{
+        color: v.$naraja;
+    }
+} 
