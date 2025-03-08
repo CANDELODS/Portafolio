@@ -190,6 +190,7 @@
         @include m.formatearParrafo;
         padding-top: 1rem;
         font-size: 1.2rem;
+        color: v.$dorado-opaco;
         @include m.tablet{
             display: none;
         }

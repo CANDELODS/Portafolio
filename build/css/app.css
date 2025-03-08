@@ -1237,6 +1237,7 @@ template {
   padding: 0;
   padding-top: 1rem;
   font-size: 1.2rem;
+  color: #FFB800;
 }
 @media (min-width: 768px) {
   .Vproyectos__click {
@@ -1464,17 +1465,19 @@ template {
   flex-direction: column;
   text-align: left;
   line-height: 1.2;
+  opacity: 0.2;
   padding: 1.5rem 1rem 1rem 2rem;
   border: 0px solid #554B39;
   border-radius: 1rem;
   box-shadow: 0px 0px 5px #554B39;
-  transition: background 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+  transition: background, opacity 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
 }
 .arquitectura__card:hover {
   cursor: pointer;
 }
 .arquitectura__card--activo {
   background: rgba(181, 143, 73, 0.08);
+  opacity: 1;
   box-shadow: 0px 0px 15px #FFA400;
   border: 1px solid gray;
   animation: pulso-sombra 2s infinite;
