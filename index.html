@@ -16,28 +16,40 @@
 </head>
 
 <body>
-    <section class="principal" id="principal">
-        <header class="principal__header">
+    <header class="header">
+        
+        <a href="index.html" class="header__logo">
+                Jc<br>
+                <span class="header__span">Portafolio</span>
+            </a>
+            
+            <div class="navegacion__movil" id="mobile-menu">
+                <i class="fa-solid fa-bars navegacion__menu"></i>
+            </div>
+
             <nav class="navegacion">
-
-                <a href="index.html" class="navegacion__logo">
-                    Jc<br>
-                    <span class="navegacion__span">Portafolio</span>
-                </a>
-
-                <div class="navegacion__derecha">
-                    <a class="navegacion__enlace" href="#principal">Inicio 2</a>
-                    <a class="navegacion__enlace" href="#proyectos">Proyectos</a>
-                    <a class="navegacion__enlace" href="#sobre-mi">Sobre mi</a>
-                    <a class="navegacion__enlace" href="#contacto">Contacto</a>
-                </div>
-
-                <div class="navegacion__movil" id="mobile-menu">
-                    <i class="fa-solid fa-bars navegacion__menu"></i>
+                <ul class="navegacion__ul">
+                    <li class="navegacion__li">
+                        <a class="navegacion__enlace" href="#principal">Inicio</a>
+                    </li>
+                    <li class="navegacion__li">
+                        <a class="navegacion__enlace" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="navegacion__li">
+                        <a class="navegacion__enlace" href="#sobre-mi">Sobre mi</a>
+                    </li>
+                    <li class="navegacion__li">
+                        <a class="navegacion__enlace" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="navegacion__btn-salir">
+                    Cerrar menú <i class="fa-solid fa-circle-xmark"></i>
                 </div>
             </nav>
         </header>
-
+        
+<section class="principal" id="principal">
         <div class="principal__grid">
 
             <div class="principal__izquierda">
@@ -50,7 +62,8 @@
                     puedas impulsar tu negocio, contáctanos para hacer tus ideas realidad.</p>
                 <div class="principal__flexBtn">
                     <a href="#contacto" class="principal__boton">Contáctame</a>
-                    <a href="build/Cv/CV Juan Candelo Portafolio.pdf" target="_blank" rel="noopener noreferrer" class="principal__boton principal__boton--cv">
+                    <a href="build/Cv/CV Juan Candelo Portafolio.pdf" target="_blank" rel="noopener noreferrer"
+                        class="principal__boton principal__boton--cv">
                         <i class="fa-solid fa-eye"></i> Ver CV
                     </a>
                 </div>
@@ -61,7 +74,8 @@
                 <picture>
                     <source srcset="build/img/yo2.avif" type="image/avif">
                     <source srcset="build/img/yo2.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" src="build/img/yo2.jpg" alt="Imagen Juan Sebastian Candelo">
+                    <img loading="lazy" width="200" height="300" src="build/img/yo2.jpg"
+                        alt="Imagen Juan Sebastian Candelo">
                 </picture>
             </div>
         </div>
@@ -78,7 +92,8 @@
                 <picture>
                     <source srcset="build/img/apLogo.avif" type="image/avif">
                     <source srcset="build/img/apLogo.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/apLogo.jpg" alt="Proyecto App Salon">
+                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/apLogo.jpg"
+                        alt="Proyecto App Salon">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">App salón</h3>
@@ -111,7 +126,8 @@
                 <picture>
                     <source srcset="build/img/brLogo.avif" type="image/avif">
                     <source srcset="build/img/brLogo.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/brLogo.jpg" alt="Proyecto De Bienes Raíces">
+                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/brLogo.jpg"
+                        alt="Proyecto De Bienes Raíces">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Bienes raíces</h3>
@@ -142,7 +158,8 @@
                 <picture>
                     <source srcset="build/img/upTask.avif" type="image/avif">
                     <source srcset="build/img/upTask.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/upTask.jpg" alt="Proyecto Up Task">
+                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/upTask.jpg"
+                        alt="Proyecto Up Task">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Up task</h3>
@@ -170,7 +187,8 @@
                 <picture>
                     <source srcset="build/img/rfLogo.avif" type="image/avif">
                     <source srcset="build/img/rfLogo.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/rfLogo.jpg" alt="Proyecto Rock And Edm Festival">
+                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/rfLogo.jpg"
+                        alt="Proyecto Rock And Edm Festival">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Rock and edm festival</h3>
@@ -194,7 +212,8 @@
                 <picture>
                     <source srcset="build/img/bcLogo.avif" type="image/avif">
                     <source srcset="build/img/bcLogo.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/bcLogo.jpg" alt="Proyecto Blog De Café">
+                    <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/bcLogo.jpg"
+                        alt="Proyecto Blog De Café">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Blog de café</h3>
@@ -224,8 +243,9 @@
             <header class="sobremi__eg sobremi__header">
                 <p class="sobremi__parrafo">El desarrollo web es una de las cosas que llaman mi atención
                     en el mundo de la tecnología e ingenieria de sistemas. Soy capáz de extraer ideas de diferentes
-                    fuentes de inspiración y creatividad (el mundo de las redes sociales, sitios web o experiencias vividas) 
-                    y utilizarlas en los proyectos que desarrollo. 
+                    fuentes de inspiración y creatividad (el mundo de las redes sociales, sitios web o experiencias
+                    vividas)
+                    y utilizarlas en los proyectos que desarrollo.
                 <p class="sobremi__parrafo">Si tienes un proyecto en mente y necesitas llevarlo a cabo
                     ¡contáctame! Estaré encantado de ayudarte a hacer tu idea realidad.</p>
             </header>
@@ -234,25 +254,34 @@
                 <picture>
                     <source srcset="build/img/Yo.avif" type="image/avif">
                     <source srcset="build/img/Yo.webp" type="image/webp">
-                    <img loading="lazy" width="200" height="300" class="sobremi__img" src="build/img/Yo.jpg" alt="Juan Sebastian Candelo">
+                    <img loading="lazy" width="200" height="300" class="sobremi__img" src="build/img/Yo.jpg"
+                        alt="Juan Sebastian Candelo">
                 </picture>
             </div>
 
             <div class="sobremi__eg sobremi__estudios">
                 <h3 class="sobremi__titulo-estudios">Estudios:</h3>
                 <ul class="sobremi__ul sobremi__ul--estudios">
-                    <li class="sobremi__li sobremi__li--estudios">Bachiller técnico en sistemas <i class="fa-solid fa-desktop"></i></li>
+                    <li class="sobremi__li sobremi__li--estudios">Bachiller técnico en sistemas <i
+                            class="fa-solid fa-desktop"></i></li>
                     <li class="sobremi__li sobremi__li--duracion"><b>Fin:</b> 2020</li>
-                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Colegio Comfacauca - Puerto Tejada</li>
-                    <li class="sobremi__li sobremi__li--estudios">Ingeniería de sistemas <i class="fa-solid fa-laptop-code"></i></li>
+                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Colegio Comfacauca - Puerto
+                        Tejada</li>
+                    <li class="sobremi__li sobremi__li--estudios">Ingeniería de sistemas <i
+                            class="fa-solid fa-laptop-code"></i></li>
                     <li class="sobremi__li sobremi__li--duracion"><b>Semestre:</b> 10mo</li>
-                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Unicomfacauca - Stader De Quilichao</li>
-                    <li class="sobremi__li sobremi__li--estudios">Bases de datos generalidades y sistemas de gestión <i class="fa-solid fa-database"></i></li>
+                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Unicomfacauca - Stader De
+                        Quilichao</li>
+                    <li class="sobremi__li sobremi__li--estudios">Bases de datos generalidades y sistemas de gestión <i
+                            class="fa-solid fa-database"></i></li>
                     <li class="sobremi__li sobremi__li--duracion"><b>Horas:</b> 40</li>
-                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Servicio nacional de aprendizaje SENA</li>
-                    <li class="sobremi__li sobremi__li--estudios">Construcción de bases de datos con Mysql <i class="fa-solid fa-cubes"></i></li>
+                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Servicio nacional de
+                        aprendizaje SENA</li>
+                    <li class="sobremi__li sobremi__li--estudios">Construcción de bases de datos con Mysql <i
+                            class="fa-solid fa-cubes"></i></li>
                     <li class="sobremi__li sobremi__li--duracion"><b>Horas:</b> 48</li>
-                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Servicio nacional de aprendizaje SENA</li>
+                    <li class="sobremi__li sobremi__li--institucion"><b>Institución:</b> Servicio nacional de
+                        aprendizaje SENA</li>
                 </ul>
             </div>
 
@@ -279,9 +308,12 @@
             <div class="sobremi__eg sobremi__aprendiendo">
                 <h3 class="sobremi__titulo-aprendiendo">Destrezas en progreso:</h3>
                 <ul class="sobremi__ul sobremi__ul--aprendiendo">
-                    <li class="sobremi__li sobremi__li--aprendiendo">Inglés - nivel intermedio <i class="fa-solid fa-language"></i></li>
-                    <li class="sobremi__li sobremi__li--aprendiendo">Git / Github <i class="fa-brands fa-github"></i></li>
-                    <li class="sobremi__li sobremi__li--aprendiendo">WordPress <i class="fa-solid fa-forward-fast"></i></li>
+                    <li class="sobremi__li sobremi__li--aprendiendo">Inglés - nivel intermedio <i
+                            class="fa-solid fa-language"></i></li>
+                    <li class="sobremi__li sobremi__li--aprendiendo">Git / Github <i class="fa-brands fa-github"></i>
+                    </li>
+                    <li class="sobremi__li sobremi__li--aprendiendo">WordPress <i class="fa-solid fa-forward-fast"></i>
+                    </li>
                 </ul>
             </div>
 

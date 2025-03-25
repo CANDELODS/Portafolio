@@ -1,163 +1,103 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.navegacion{
-
+.header {
+    position: sticky;
+    top: 3%;
+    z-index: 1;
+    border-radius: 5rem;
+    animation: header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 500px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 2rem 0 5rem 0;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
 
-    @include m.tablet {
-        margin: 2rem 0 0 0;
-        position: fixed;
-        top: 1.5rem;
-        width: 94%;
-        z-index: 10;
-        animation: header linear both;
-        animation-timeline: scroll(root);
-        animation-range: 0 500px;
-        &--proyectos{
-            animation: none;
-        }
-    }
-
-    &--proyectos{
-        margin: 2rem 0 2rem 0;
-        position: relative;
-    }
+    @include m.tablet {}
 
     &__logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
         color: v.$naraja;
-        font-weight: bold;
-        padding: 1rem;
-        animation: cambiarColorEnlace linear both;
-        animation-timeline: scroll(root);
-        animation-range: 0 500px;
+    }
+}
 
-        position: relative;
-        transition: all 0.5s ease;
+.navegacion {
 
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 9px;
-            left: 7px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, v.$blanco, v.$naraja, v.$naraja);
-            animation: cambiarColorBefore linear both;
-            animation-timeline: scroll(root);
-            animation-range: 0 500px;
-            z-index: 1;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease-in-out;
-        }
+    position: fixed;
+    /*Ubicar navegación en el centro*/
+    top: 15%;
+    right: 50%;
+    transform: translate(50%);
+    height: auto;
+    /**/
+    width: 95vw;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    /*Mover links verticalmente*/
+    justify-content: center;
+    gap: 2rem;
+    /**/
+    align-items: center;
+    padding: 1rem;
+    background-color: #1c1c1c;
+    /*Cortina que resalta la NavBar*/
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    /**/
+    /*Esconder NavBar*/
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(50%, -25%);
+    transition: all .4s ease;
 
-        &:hover::before {
-            transform: scaleX(1);
-        }
-
-        &:hover {
-            color: v.$naraja;
-        }
+    @include m.tablet {
+        
     }
 
-    &__span{
-        color: v.$cafe-claro;
-        font-size: 1.4rem;
-        animation: cambiarColorEnlace linear both;
-        animation-timeline: scroll(root);
-        animation-range: 0 500px;
-    }
-
-    &__derecha{
-        display: none;
-        @include m.tablet {
-            display: flex;
-            gap: 3rem;
-        }
-
-        &.activa{
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            top: 80px;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            gap: 4rem;
-            z-index: 3;
-            transition: all 500ms ease;
-        }
-
-        &.oculta{
-            display: none;
-            transition: all 500ms ease;
-
-        }
+    &__ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        gap: 2rem;
+        padding: 0;
     }
 
     &__enlace{
-        color: v.$azulCielo;
-        font-weight: 500;
-
-        @include m.tablet{
-
-            position: relative;
-            transition: all 0.5s ease;
-            animation: cambiarColorEnlace linear both;
-            animation-timeline: scroll(root);
-            animation-range: 0 500px;
-    
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(to right, v.$naraja, v.$naraja, v.$azulCielo);
-                animation: cambiarColorBefore linear both;
-                animation-timeline: scroll(root);
-                animation-range: 0 500px;
-                z-index: 1;
-                transform: scaleX(0);
-                transform-origin: left;
-                transition: transform 0.5s ease-in-out;
-            }
-    
-            &:hover::before {
-                transform: scaleX(1);
-            }
-    
-            &:hover {
-                color: v.$naraja;
-            }
-        }
-
-        &:nth-child(4) {
-            @include m.tablet{
-                padding-right: 1rem;
-            }
-        }
+        text-decoration: none;
+        color: white;
     }
 
     &__movil{
-        color: v.$blanco;
-        padding-right: 1rem;
-        transition: all 500ms ease;
-        @include m.tablet {
-            display: none;
+        color: white;
+        font-size: 3rem;
+        @include m.tablet{
+
         }
     }
 
-    &__menu{
-        font-size: 3.5rem;
-
-        &:hover {
-            cursor: pointer;
-        }
+    &__btn-salir{
+        color: black;
+        background-color: white;
+        padding: .5rem;
+        margin-bottom: 2rem;
+        border-radius: .5rem;
     }
+
+}
+
+.mostrar{
+    opacity: 1;
+    visibility: hidden;
+    transform: translate(50%, 0);
+}
+
+.esconder{
+    opacity: 0;
+    visibility: hidden;
 }
