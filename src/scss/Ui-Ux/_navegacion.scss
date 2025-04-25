@@ -4,6 +4,8 @@
 .header {
     position: sticky;
     top: 3%;
+    left: 1rem;
+    width: 95vw;
     z-index: 1;
     border-radius: 5rem;
     animation: header linear both;
@@ -27,15 +29,14 @@
 }
 
 .navegacion {
-
     position: fixed;
     /*Ubicar navegación en el centro*/
     top: 15%;
     right: 50%;
     transform: translate(50%);
-    height: auto;
+    height: 50vh;
     /**/
-    width: 95vw;
+    width: 50vw;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -93,7 +94,7 @@
 
 .mostrar{
     opacity: 1;
-    visibility: hidden;
+    visibility: visible;
     transform: translate(50%, 0);
 }
 

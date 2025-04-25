@@ -79,6 +79,39 @@ function mostrarImagen(ruta) {
 }
 
 // // MENÚ MOBILE
+const abrirMenu = document.querySelector('#abrirMenu');
+const cerrarMenu = document.querySelector('#cerrarMenu');
+const navegacion = document.querySelector('#navegacion');
+const links = document.querySelectorAll('.navegacion__enlace');
+
+//Función para abrir el menú
+abrirMenu.addEventListener('click', function(){
+    //Agrego la clase .mostrar a la nav
+    navegacion.classList.add('mostrar');
+});
+
+//Función para cerrar el menú
+cerrarMenu.addEventListener('click', function(){
+    //Elimino la clase .mostrar a la nav
+    navegacion.classList.remove('mostrar');
+});
+
+//Función para cerrar el menú al hacer click en un enlace
+links.forEach(link => {
+    //Agrego el evento click a cada enlace
+    link.addEventListener('click', function(){
+        //Agrego la clase .esconder a la navegacion
+        navegacion.classList.add('esconder');
+        //Elimino la clase .mostrar a la navegacion
+        navegacion.classList.remove('mostrar');
+        //Elimino la clase .esconder a la navegacion después de 300ms
+        setTimeout(() => {
+            navegacion.classList.remove('esconder');
+        }, 300);
+    });
+});
+
+
 // const mobileMenuBtn = document.querySelector('#mobile-menu');
 // const navegacionDiv = document.querySelector('.navegacion__derecha');
 // // const proyectosDiv = document.querySelector('.proyectos'); // Selecciona el contenedor de proyectos

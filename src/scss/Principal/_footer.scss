@@ -19,6 +19,13 @@
         color: v.$blanco;
     }
 
+    &__derecha{
+        padding-bottom: 2rem;
+        @include m.tablet{
+            padding-bottom: 0;
+        }
+    }
+
     &__navegacion{
         display: flex;
         gap: 2rem;

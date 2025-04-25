@@ -18,24 +18,35 @@
 <body>
     <!-- VProyectos-->
     <section class="Vproyectos" id="Vproyectos">
-        <header class="Vproyectos__header">
-            <nav class="navegacion navegacion--proyectos">
-                <a href="index.html" class="navegacion__logo">
+        <header class="header">
+        
+            <a href="index.html" class="header__logo">
                     Jc<br>
-                    <span class="navegacion__span">Portafolio</span>
+                    <span class="header__span">Portafolio</span>
                 </a>
-
-                <div class="navegacion__derecha">
-                    <a class="navegacion__enlace" href="#Vproyectos">Inicio</a>
-                    <a class="navegacion__enlace" href="#tecnologias">Tecnologías</a>
-                    <a class="navegacion__enlace" href="#arquitectura">Arquitectura</a>
-                </div>
                 
-                <div class="navegacion__movil">
-                    <i id="mobile-menu" class="fa-solid fa-bars navegacion__menu"></i>
+                <div class="navegacion__movil" id="abrirMenu">
+                    <i class="fa-solid fa-bars navegacion__menu"></i>
                 </div>
-            </nav>
-        </header>
+    
+                <nav class="navegacion" id="navegacion">
+                    <ul class="navegacion__ul">
+                        <li class="navegacion__li">
+                            <a class="navegacion__enlace" href="#Vproyectos">Inicio</a>
+                        </li>
+                        <li class="navegacion__li">
+                            <a class="navegacion__enlace" href="#tecnologias">Tecnologías</a>
+                        </li>
+                        <li class="navegacion__li">
+                            <a class="navegacion__enlace" href="#arquitectura">Arquitectura</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="navegacion__btn-salir" id="cerrarMenu">
+                        Cerrar menú <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                </nav>
+            </header>
 
         <h1 class="Vproyectos__titulo">Bienes raíces</h1>
 
