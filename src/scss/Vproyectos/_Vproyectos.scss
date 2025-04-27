@@ -3,8 +3,10 @@
 
 .Vproyectos{
     @include m.contenedorSm;
+    margin-top: 8rem;
     @include m.tablet{
         @include m.contenedor;
+        margin-top: 0rem;
     }
     &{
         color: v.$blanco;

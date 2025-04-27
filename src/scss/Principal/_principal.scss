@@ -94,11 +94,12 @@
 
     &__izquierda {
         height: 100%;
-        margin: 4rem 0 0 0;
+        margin: 16rem 0 0 0;
         animation: entradaIzquierda 1.5s backwards;
 
         @include m.tablet {
             height: inherit;
+            margin: 0;
         }
     }
 

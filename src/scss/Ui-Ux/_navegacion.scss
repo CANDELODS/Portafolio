@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 3%;
     left: 1rem;
     width: 95vw;
@@ -17,7 +17,9 @@
     gap: 2rem;
     padding: 1rem 1.5rem 1rem 1.5rem;
 
-    @include m.tablet {}
+    @include m.tablet {
+
+    }
 
     &__logo{
         display: flex;
@@ -57,7 +59,20 @@
     transition: all .4s ease;
 
     @include m.tablet {
-        
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // margin: 2rem 0 0 0;
+        // top: 1.5rem;
+        background-color: transparent;
+        box-shadow: none;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+
     }
 
     &__ul{
@@ -67,6 +82,13 @@
         list-style-type: none;
         gap: 2rem;
         padding: 0;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 6rem;
+        }
     }
 
     &__enlace{
@@ -78,7 +100,7 @@
         color: white;
         font-size: 3rem;
         @include m.tablet{
-
+            display: none;
         }
     }
 
@@ -88,6 +110,9 @@
         padding: .5rem;
         margin-bottom: 2rem;
         border-radius: .5rem;
+        @include m.tablet{
+            display: none;
+        }
     }
 
 }

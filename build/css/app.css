@@ -433,12 +433,13 @@ template {
 }
 .principal__izquierda {
   height: 100%;
-  margin: 4rem 0 0 0;
+  margin: 16rem 0 0 0;
   animation: entradaIzquierda 1.5s backwards;
 }
 @media (min-width: 768px) {
   .principal__izquierda {
     height: inherit;
+    margin: 0;
   }
 }
 .principal__descripcion {
@@ -1033,11 +1034,13 @@ template {
 .Vproyectos {
   width: min(90%, 140rem);
   margin: 0 auto;
+  margin-top: 8rem;
 }
 @media (min-width: 768px) {
   .Vproyectos {
     width: min(95%, 140rem);
     margin: 0 auto;
+    margin-top: 0rem;
   }
 }
 .Vproyectos {
@@ -1535,7 +1538,7 @@ template {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 3%;
   left: 1rem;
   width: 95vw;
@@ -1586,6 +1589,21 @@ template {
   transform: translate(50%, -25%);
   transition: all 0.4s ease;
 }
+@media (min-width: 768px) {
+  .navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .navegacion__ul {
   display: flex;
   flex-direction: column;
@@ -1593,6 +1611,14 @@ template {
   list-style-type: none;
   gap: 2rem;
   padding: 0;
+}
+@media (min-width: 768px) {
+  .navegacion__ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+  }
 }
 .navegacion__enlace {
   text-decoration: none;
@@ -1602,12 +1628,22 @@ template {
   color: white;
   font-size: 3rem;
 }
+@media (min-width: 768px) {
+  .navegacion__movil {
+    display: none;
+  }
+}
 .navegacion__btn-salir {
   color: black;
   background-color: white;
   padding: 0.5rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .navegacion__btn-salir {
+    display: none;
+  }
 }
 
 .mostrar {
