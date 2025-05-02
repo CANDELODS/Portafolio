@@ -338,11 +338,13 @@ template {
 .principal {
   width: min(90%, 140rem);
   margin: 0 auto;
+  margin-top: 2rem;
 }
 @media (min-width: 768px) {
   .principal {
     width: min(95%, 140rem);
     margin: 0 auto;
+    margin-top: 0;
   }
 }
 .principal {
@@ -1040,7 +1042,7 @@ template {
   .Vproyectos {
     width: min(95%, 140rem);
     margin: 0 auto;
-    margin-top: 0rem;
+    margin-top: 10rem;
   }
 }
 .Vproyectos {
@@ -1553,12 +1555,45 @@ template {
   gap: 2rem;
   padding: 1rem 1.5rem 1rem 1.5rem;
 }
+@media (min-width: 768px) {
+  .header {
+    justify-content: center;
+    top: 2rem;
+    left: 20%;
+    width: 60dvw;
+    gap: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 800px) {
+  .header {
+    width: 60dvw;
+    left: 20%;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    width: 50dvw;
+    left: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    width: 50dvw;
+    left: 25%;
+  }
+}
 .header__logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   color: #FFA400;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    display: none;
+  }
 }
 
 .navegacion {
@@ -1591,17 +1626,18 @@ template {
 }
 @media (min-width: 768px) {
   .navegacion {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    transform: translate(0);
+    height: auto;
+    gap: 0;
+    padding: 0;
     background-color: transparent;
     box-shadow: none;
-    height: auto;
     opacity: 1;
     visibility: visible;
+    transform: translate(0, 0);
   }
 }
 .navegacion__ul {
@@ -1616,8 +1652,22 @@ template {
   .navegacion__ul {
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 6rem;
+    gap: 3rem;
+  }
+}
+@media (min-width: 800px) {
+  .navegacion__ul {
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .navegacion__ul {
+    gap: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .navegacion__ul {
+    gap: 5rem;
   }
 }
 .navegacion__enlace {

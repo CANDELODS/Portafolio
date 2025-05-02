@@ -18,7 +18,26 @@
     padding: 1rem 1.5rem 1rem 1.5rem;
 
     @include m.tablet {
+        justify-content: center;
+        top: 2rem;
+        left: 20%;
+        width: 60dvw;
+        gap: 0;
+        padding: 0;
+    }
 
+    @include m.xl-tablet{
+        width: 60dvw;
+        left: 20%;
+    }
+    
+    @include m.desktop{
+        width: 50dvw;
+        left: 25%;
+    }
+    @include m.xl-desktop{
+        width: 50dvw;
+        left: 25%;
     }
 
     &__logo{
@@ -27,6 +46,9 @@
         align-items: center;
         text-decoration: none;
         color: v.$naraja;
+        @include m.tablet{
+            display: none;
+        }
     }
 }
 
@@ -46,6 +68,7 @@
     justify-content: center;
     gap: 2rem;
     /**/
+
     align-items: center;
     padding: 1rem;
     background-color: #1c1c1c;
@@ -59,20 +82,18 @@
     transition: all .4s ease;
 
     @include m.tablet {
-        position: fixed;
+        position: relative;
         top: 0;
         right: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        // margin: 2rem 0 0 0;
-        // top: 1.5rem;
+        transform: translate(0);
+        height: auto;
+        gap: 0;
+        padding: 0;
         background-color: transparent;
         box-shadow: none;
-        height: auto;
         opacity: 1;
         visibility: visible;
-
+        transform: translate(0, 0);
     }
 
     &__ul{
@@ -86,8 +107,18 @@
         @include m.tablet {
             flex-direction: row;
             justify-content: center;
-            align-items: center;
-            gap: 6rem;
+            gap: 3rem;
+        }
+
+        @include m.xl-tablet{
+            gap: 3rem;
+        }
+
+        @include m.desktop{
+            gap: 5rem;
+        }
+        @include m.xl-desktop{
+            gap: 5rem;
         }
     }
 
