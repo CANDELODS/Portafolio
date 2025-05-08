@@ -58,7 +58,7 @@
     top: 15%;
     right: 50%;
     transform: translate(50%);
-    height: 50vh;
+    height: 37vh;
     /**/
     width: 50vw;
     border-radius: 2rem;
@@ -125,6 +125,11 @@
     &__enlace{
         text-decoration: none;
         color: white;
+        transition: color 0.5s ease;
+
+        &:hover{
+            color: v.$naraja;
+        }
     }
 
     &__movil{
@@ -157,4 +162,8 @@
 .esconder{
     opacity: 0;
     visibility: hidden;
+}
+
+.activo{
+    color: v.$naraja;
 }

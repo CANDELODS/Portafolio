@@ -78,7 +78,7 @@ function mostrarImagen(ruta) {
     body.classList.add('fijar-body');
 }
 
-// // MENÚ MOBILE
+// MENÚ MOBILE
 const abrirMenu = document.querySelector('#abrirMenu');
 const cerrarMenu = document.querySelector('#cerrarMenu');
 const navegacion = document.querySelector('#navegacion');
@@ -110,3 +110,32 @@ links.forEach(link => {
         }, 300);
     });
 });
+//FIN MENÚ MOBILE
+
+//Función para cambiar estado active de la navegación
+// Función que detecta la sección visible
+window.addEventListener("scroll", () => {
+    let secciones = document.querySelectorAll("section"); //Seleccionamos todas las secciones
+    let enlaces = document.querySelectorAll(".navegacion__enlace"); //Seleccionamos todos los enlaces de la navegación
+  
+    //Iteramos cada sección para ver si está visible
+    secciones.forEach((seccion) => {
+      let top = window.scrollY; //Obtenemos la posición del scroll
+      //Le restamos 150px para que se active un poco antes
+      let offset = seccion.offsetTop - 150;
+      //Obtenemos la altura de la sección
+      let height = seccion.offsetHeight;
+      //Obtenemos el id de la sección
+      let id = seccion.getAttribute("id");
+        
+      //Si la sección está visible, le agregamos la clase activo al enlace correspondiente
+      if (top >= offset && top < offset + height) {
+        //Eliminamos la clase activo de todos los enlaces
+        enlaces.forEach((enlace) => {
+          enlace.classList.remove("activo");
+          //Agregamos la clase activo al enlace correspondiente
+          document.querySelector(`.navegacion__enlace[href*=${id}]`).classList.add("activo");
+        });
+      }
+    });
+  });

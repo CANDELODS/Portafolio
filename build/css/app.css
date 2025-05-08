@@ -1025,7 +1025,7 @@ template {
   }
 }
 .footer__enlace {
-  color: #EAF6FF;
+  color: white;
   font-weight: 500;
   transition: color 0.5s ease;
 }
@@ -1602,7 +1602,7 @@ template {
   top: 15%;
   right: 50%;
   transform: translate(50%);
-  height: 50vh;
+  height: 37vh;
   /**/
   width: 50vw;
   border-radius: 2rem;
@@ -1673,6 +1673,10 @@ template {
 .navegacion__enlace {
   text-decoration: none;
   color: white;
+  transition: color 0.5s ease;
+}
+.navegacion__enlace:hover {
+  color: #FFA400;
 }
 .navegacion__movil {
   color: white;
@@ -1705,6 +1709,10 @@ template {
 .esconder {
   opacity: 0;
   visibility: hidden;
+}
+
+.activo {
+  color: #FFA400;
 }
 
 @keyframes header {
