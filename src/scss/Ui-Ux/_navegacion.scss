@@ -45,6 +45,28 @@
         left: 34%;
     }
 
+        &--vproyectos{
+        @include m.tablet{
+            left: 21%;
+        }
+
+        @include m.xl-tablet{
+            left: 23.5%;
+        }
+
+        @include m.desktop{
+            left: 26%;
+        }
+
+        @include m.xl-desktop{
+            left: 30%;
+        }
+
+        @include m.xxl-desktop{
+            left: 37%;
+        }
+    }
+
     &__logo{
         display: flex;
         flex-direction: column;
