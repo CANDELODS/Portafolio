@@ -23,7 +23,8 @@
     &__grid {
 
         @include m.grid(2, 1rem);
-        grid-template-rows: 20% 20% 40% 20%;
+        // grid-template-rows: 20% 20% 40% 20%;
+        grid-auto-rows: auto;
         grid-template-areas:
         "header header"
         "hb aprendiendo"
@@ -32,7 +33,8 @@
 
         @include m.tablet {
             @include m.grid(3, 1rem);
-            grid-template-rows: 40% 30% 30%;
+            // grid-template-rows: 40% 30% 30%;
+            grid-auto-rows: auto;
             grid-template-areas:
             "header header estudios"
             "img hb estudios"
@@ -117,24 +119,55 @@
         }
 
         &--hobbies {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
             margin-bottom: 1rem;
-
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: #232528 3px 3px 6px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 0px;
             &:nth-child(5) {
                 margin-bottom: 0;
             }
         }
 
         &--hb {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: #fff 3px 3px 6px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 0px;
             margin-bottom: 1rem;
             color: v.$gris-blanco;
+            @include m.desktop{
+                display: block;
+                padding: 0;
+                border: none;
+                box-shadow: none;
+                margin-bottom: 2rem;
+            }
             &:nth-child(4) {
                 margin-bottom: 0;
             }
         }
 
         &--aprendiendo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: #fff 3px 3px 6px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 0px;
             margin-bottom: 1rem;
             color: v.$gris-blanco;
+            @include m.desktop{
+                display: block;
+                padding: 0;
+                border: none;
+                box-shadow: none;
+                margin-bottom: 2rem;
+            }
             &:nth-child(4) {
                 margin-bottom: 0;
             }
@@ -154,33 +187,55 @@
         background-color: v.$barro;
         border-radius: 1rem;
         display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         gap: 1rem;
         padding: 2rem;
         grid-area: hobbies;
+        @include m.desktop{
+            flex-direction: row;
+        }
     }
 
     &__titulo-hobbies {
         @include m.formatearParrafo;
-        font-size: 1.9rem;
+        font-size: 1.7rem;
+        @include m.tablet{
+            font-size: 1.9rem;
+        }
+
+        @include m.xl-desktop{
+            font-size: 2.2rem;
+        }
     }
 
     &__habilidades-blandas {
-        background-color: v.$principal;
+        background-color: v.$cafe;
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         gap: 1rem;
         padding: 2rem;
         grid-area: hb;
+        @include m.tablet{
+            justify-content: center;
+        }
+        @include m.desktop{
+            gap: 2rem;
+        }
     }
 
     &__titulo-hb {
         @include m.formatearParrafo;
         font-size: 1.9rem;
         color: v.$gris-blanco;
+        text-align: center;
+        
+        @include m.desktop{
+            text-align: left;
+        }
     }
 
     &__aprendiendo {
@@ -188,16 +243,27 @@
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         gap: 1rem;
         padding: 2rem;
         grid-area: aprendiendo;
+        @include m.tablet{
+            justify-content: center;
+        }
+        @include m.desktop{
+            gap: 2rem;
+        }
     }
 
     &__titulo-aprendiendo {
         @include m.formatearParrafo;
         font-size: 1.9rem;
         color: v.$gris-blanco;
+        text-align: center;
+
+        @include m.desktop{
+            text-align: left;
+        }
     }
     
 }

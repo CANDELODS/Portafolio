@@ -750,7 +750,7 @@ template {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 20% 20% 40% 20%;
+  grid-auto-rows: auto;
   grid-template-areas: "header header" "hb aprendiendo" "estudios estudios" "img hobbies";
 }
 @media (min-width: 768px) {
@@ -758,7 +758,7 @@ template {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 40% 30% 30%;
+    grid-auto-rows: auto;
     grid-template-areas: "header header estudios" "img hb estudios" "img aprendiendo hobbies";
   }
 }
@@ -836,21 +836,57 @@ template {
   margin-bottom: 0;
 }
 .sobremi__li--hobbies {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: #232528 3px 3px 6px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 0px;
 }
 .sobremi__li--hobbies:nth-child(5) {
   margin-bottom: 0;
 }
 .sobremi__li--hb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: #fff 3px 3px 6px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 0px;
   margin-bottom: 1rem;
   color: hsla(0, 0%, 100%, 0.65);
+}
+@media (min-width: 1024px) {
+  .sobremi__li--hb {
+    display: block;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 2rem;
+  }
 }
 .sobremi__li--hb:nth-child(4) {
   margin-bottom: 0;
 }
 .sobremi__li--aprendiendo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: #fff 3px 3px 6px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 0px;
   margin-bottom: 1rem;
   color: hsla(0, 0%, 100%, 0.65);
+}
+@media (min-width: 1024px) {
+  .sobremi__li--aprendiendo {
+    display: block;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 2rem;
+  }
 }
 .sobremi__li--aprendiendo:nth-child(4) {
   margin-bottom: 0;
@@ -865,48 +901,96 @@ template {
   background-color: #b38032;
   border-radius: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
   padding: 2rem;
   grid-area: hobbies;
 }
+@media (min-width: 1024px) {
+  .sobremi__hobbies {
+    flex-direction: row;
+  }
+}
 .sobremi__titulo-hobbies {
   margin: 0;
   padding: 0;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
+}
+@media (min-width: 768px) {
+  .sobremi__titulo-hobbies {
+    font-size: 1.9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .sobremi__titulo-hobbies {
+    font-size: 2.2rem;
+  }
 }
 .sobremi__habilidades-blandas {
-  background-color: #ff9900;
+  background-color: #9d7944;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 2rem;
   grid-area: hb;
+}
+@media (min-width: 768px) {
+  .sobremi__habilidades-blandas {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .sobremi__habilidades-blandas {
+    gap: 2rem;
+  }
 }
 .sobremi__titulo-hb {
   margin: 0;
   padding: 0;
   font-size: 1.9rem;
   color: hsla(0, 0%, 100%, 0.65);
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .sobremi__titulo-hb {
+    text-align: left;
+  }
 }
 .sobremi__aprendiendo {
   background-color: #6c757d;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 2rem;
   grid-area: aprendiendo;
+}
+@media (min-width: 768px) {
+  .sobremi__aprendiendo {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .sobremi__aprendiendo {
+    gap: 2rem;
+  }
 }
 .sobremi__titulo-aprendiendo {
   margin: 0;
   padding: 0;
   font-size: 1.9rem;
   color: hsla(0, 0%, 100%, 0.65);
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .sobremi__titulo-aprendiendo {
+    text-align: left;
+  }
 }
 
 .contacto {
