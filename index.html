@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soy Juan Sebastian Candelo Balanta, desarrollador web freelance especializado en HTML, CSS (SCSS), JavaScript y PHP. Diseño sitios web modernos, rápidos y funcionales para empresas y emprendedores en Colombia. ¡Contáctame y haz crecer tu presencia digital!">
+    <meta name="author" content="Juan Sebastian Candelo Balanta">
+    <meta name="keywords" content="Juan Candelo, Juan Sebastian Candelo Balanta, portafolio web, desarrollador web, proyectos, HTML, CSS, JavaScript, diseño web, desarrollo web en Colombia">
+    <!--Etiquetas Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Portafolio de Juan Sebastian Candelo | Desarrollador Web">
+    <meta property="og:description" content="Soy Juan Candelo, desarrollador web con experiencia en HTML, CSS, JavaScript y PHP. Explora mis proyectos, habilidades y experiencia profesional.">
+    <meta property="og:image" content="https://portafoliojuancandelojc.netlify.app/build/img/preview.png">
+    <meta property="og:url" content="https://portafoliojuancandelojc.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portafolio Juan Candelo">
+    <meta property="og:locale" content="es_CO">
+    <!--Twiter "X"-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portafolio Web de Juan Candelo">
+    <meta name="twitter:description" content="Explora mis proyectos y experiencia como desarrollador web.">
+    <meta name="twitter:image" content="https://portafoliojuancandelojc.netlify.app/preview.png">
     <link rel="stylesheet" href="build/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +28,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portafolio Juan Candelo</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Desarrollador Web Freelance en Colombia | Portafolio de Juan Sebastian Candelo</title>
 </head>
 
 <body>
@@ -65,7 +82,7 @@
                     puedas impulsar tu negocio, contáctanos para hacer tus ideas realidad.</p>
                 <div class="principal__flexBtn">
                     <a href="#contacto" class="principal__boton">Contáctame</a>
-                    <a href="build/Cv/CV Juan Candelo Portafolio.pdf" target="_blank" rel="noopener noreferrer"
+                    <a href="build/Cv/CV Juan Candelo Portafolio.pdf" target="_blank" rel="noopener noreferrer" download title="Descargar mi CV en PDF"
                         class="principal__boton principal__boton--cv">
                         <i class="fa-solid fa-eye"></i> Ver CV
                     </a>
@@ -78,7 +95,7 @@
                     <source srcset="build/img/imgPrincipal.avif" type="image/avif">
                     <source srcset="build/img/imgPrincipal.webp" type="image/webp">
                     <img loading="lazy" width="200" height="300" src="build/img/imgPrincipal.png"
-                        alt="Imagen Juan Sebastian Candelo">
+                        alt="Imagen del rostro de Juan Sebastian Candelo">
                 </picture>
             </div>
         </div>
@@ -91,12 +108,12 @@
 
         <div class="proyectos__grid">
 
-            <div class="proyectos__proyecto">
+            <article class="proyectos__proyecto">
                 <picture>
                     <source srcset="build/img/apLogo.avif" type="image/avif">
                     <source srcset="build/img/apLogo.webp" type="image/webp">
                     <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/apLogo.jpg"
-                        alt="Proyecto App Salon">
+                        alt="Captura del sitio web App Salón, aplicación para reservar servicios de belleza">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">App salón</h3>
@@ -123,14 +140,14 @@
                     </div>
                 </div>
 
-            </div>
+            </article>
 
-            <div class="proyectos__proyecto">
+            <article class="proyectos__proyecto">
                 <picture>
                     <source srcset="build/img/brLogo.avif" type="image/avif">
                     <source srcset="build/img/brLogo.webp" type="image/webp">
                     <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/brLogo.jpg"
-                        alt="Proyecto De Bienes Raíces">
+                        alt="Captura del sitio Bienes Raices, aplicación para vender y comprar propiedades">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Bienes raíces</h3>
@@ -155,14 +172,14 @@
                         <a href="BienesRaices.html" class="proyectos__btn--info">Más información</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="proyectos__proyecto">
+            <article class="proyectos__proyecto">
                 <picture>
                     <source srcset="build/img/upTask.avif" type="image/avif">
                     <source srcset="build/img/upTask.webp" type="image/webp">
                     <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/upTask.jpg"
-                        alt="Proyecto Up Task">
+                        alt="Captura del sitio web Up Task, aplicación para gestionar tareas y proyectos">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Up task</h3>
@@ -184,14 +201,14 @@
                         <a href="UpTask.html" class="proyectos__btn--info">Más información</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="proyectos__proyecto">
+            <article class="proyectos__proyecto">
                 <picture>
                     <source srcset="build/img/rfLogo.avif" type="image/avif">
                     <source srcset="build/img/rfLogo.webp" type="image/webp">
                     <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/rfLogo.jpg"
-                        alt="Proyecto Rock And Edm Festival">
+                        alt="Captura del sitio web Rock AND EDM Festival, landing page para un festival de música">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Rock and edm festival</h3>
@@ -209,14 +226,14 @@
                         <a href="RockAndEdmFestival.html" class="proyectos__btn--info">Más información</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="proyectos__proyecto">
+            <article class="proyectos__proyecto">
                 <picture>
                     <source srcset="build/img/bcLogo.avif" type="image/avif">
                     <source srcset="build/img/bcLogo.webp" type="image/webp">
                     <img loading="lazy" width="200" height="300" class="proyectos__img" src="build/img/bcLogo.jpg"
-                        alt="Proyecto Blog De Café">
+                        alt="Captura del sitio web Blog De Café, aplicación para publicar artículos sobre café">
                 </picture>
                 <div class="proyectos__proyecto-elementos">
                     <h3 class="proyectos__nombre">Blog de café</h3>
@@ -233,7 +250,7 @@
                         <a href="BlogDeCafe.html" class="proyectos__btn--info">Más información</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
         </div>
     </section>
@@ -369,7 +386,7 @@
                     <source srcset="build/img/Yo.avif" type="image/avif">
                     <source srcset="build/img/Yo.webp" type="image/webp">
                     <img loading="lazy" width="200" height="300" class="sobremi__img" src="build/img/Yo.jpeg"
-                        alt="Juan Sebastian Candelo">
+                        alt="Imagen a cuerpo completo de Juan Sebastian Candelo">
                 </picture>
             </div>
 

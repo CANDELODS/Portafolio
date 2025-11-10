@@ -17,7 +17,6 @@ html {
 body {
     font-family: v.$fuente_principal;
     font-size: 1.8rem;
-    // background-color: black;
     min-height: 100vh; /* Asegura que el fondo cubra la pantalla completa */
     background-color: hsla(53, 0%, 9%, 1);
     background-image: radial-gradient(circle at 40% 20%, hsla(81, 0%, 9%, 1) 0%, transparent 50%),

@@ -27,21 +27,17 @@
     }
 
     @include m.xl-tablet{
-        // width: 60dvw;
         left: 18%;
     }
     
     @include m.desktop{
-        // width: 50dvw;
         left: 22%;
     }
     @include m.xl-desktop{
-        // width: 50dvw;
         left: 27%;
     }
 
     @include m.xxl-desktop{
-        // width: 50dvw;
         left: 34%;
     }
 

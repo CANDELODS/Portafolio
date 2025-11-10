@@ -23,7 +23,6 @@
     &__grid {
 
         @include m.grid(2, 1rem);
-        // grid-template-rows: 20% 20% 40% 20%;
         grid-auto-rows: auto;
         grid-template-areas:
         "header header"
@@ -33,7 +32,6 @@
 
         @include m.tablet {
             @include m.grid(3, 1rem);
-            // grid-template-rows: 40% 30% 30%;
             grid-auto-rows: auto;
             grid-template-areas:
             "header header estudios"
