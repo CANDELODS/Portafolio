@@ -20,7 +20,7 @@
     @include m.tablet {
         justify-content: center;
         top: 2rem;
-        left: 20%;
+        left: 16%;
         width: auto;
         gap: 0;
         padding: 1;
@@ -28,7 +28,7 @@
 
     @include m.xl-tablet{
         // width: 60dvw;
-        left: 20%;
+        left: 18%;
     }
     
     @include m.desktop{

@@ -5,7 +5,7 @@
     @include m.contenedorSm;
     margin-top: 2rem;
     @include m.tablet {
-        @include m.contenedor;
+        // @include m.contenedor;
         margin-top: 0;
     }
 
@@ -16,11 +16,11 @@
     &__grid {
         @include m.grid(1, 1rem);
         justify-items: center;
-        align-items: center;
+        // align-items: center;
 
         @include m.tablet {
             @include m.grid(2, 1rem);
-            margin-top: 4rem;
+            margin-top: 10rem;
         }
 
         &-parrafo {
@@ -95,7 +95,7 @@
 
     &__izquierda {
         height: 100%;
-        margin: 16rem 0 0 0;
+        margin: 9rem 0 0 0;
         animation: entradaIzquierda 1.5s backwards;
 
         @include m.tablet {
@@ -124,17 +124,19 @@
         display: flex;
         flex-direction: column;
         justify-content: left;
+        gap: 2rem;
+        align-items: flex-start;
 
         @include m.tablet{
             flex-direction: row;
             gap: 1rem;
+            align-items: center;
         }
     }
 
     &__boton {
         @include m.boton(v.$principal, v.$blanco);
-        margin: 2rem 19rem 0 0;
-        width: 50%;
+        width: auto;
         border-radius: 5rem;
         border: 2px solid transparent;
         transition: border, box-shadow, background-color 0.5s ease;
@@ -147,7 +149,7 @@
 
         &--cv{
             @include m.boton(v.$blanco, v.$negro);
-            width: 50%;
+            width: auto;
             border: 2px solid transparent;
             transition: border, box-shadow, color, background-color 0.5s ease;
 
@@ -157,6 +159,14 @@
                 color: v.$blanco;
                 background-color: transparent;
             }
+
+            @include m.tablet {
+                padding: 1.5rem 3rem;
+            }
+            @include m.desktop{
+                padding: 1.5rem 4rem;
+            }
+
         }
 
         @include m.tablet {
@@ -165,21 +175,16 @@
     }
 
     &__img {
-        width: 24rem;
-        // background-size: 24rem;
-        // background-image: image-set(
-        //     url(../../../build/img/bg_1.avif) 1x,
-        //     url(../../../build/img/bg_1.webp) 1x,
-        //     url(../../../build/img/bg_1.png) 1x,
-        // );
-        // background-position: center center;
-        // background-repeat: no-repeat;
-        animation: imagenEntrando 2s backwards,
-            imagenFlotando 2s infinite 2s alternate;
+        width: 30rem;
+        animation: imagenEntrando 2s backwards;
+            // imagenFlotando 2s infinite 2s alternate;
+            background-size: 34rem;
+            filter: drop-shadow(
+                0 0 10px rgba(0, 0, 0, .8)
+            );
 
         @include m.tablet {
             width: 34rem;
-            background-size: 34rem;
         }
     }
 }

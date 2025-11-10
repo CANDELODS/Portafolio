@@ -342,8 +342,6 @@ template {
 }
 @media (min-width: 768px) {
   .principal {
-    width: min(95%, 140rem);
-    margin: 0 auto;
     margin-top: 0;
   }
 }
@@ -355,14 +353,13 @@ template {
   gap: 1rem;
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
-  align-items: center;
 }
 @media (min-width: 768px) {
   .principal__grid {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 4rem;
+    margin-top: 10rem;
   }
 }
 .principal__grid-parrafo {
@@ -435,7 +432,7 @@ template {
 }
 .principal__izquierda {
   height: 100%;
-  margin: 16rem 0 0 0;
+  margin: 9rem 0 0 0;
   animation: entradaIzquierda 1.5s backwards;
 }
 @media (min-width: 768px) {
@@ -466,11 +463,14 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: left;
+  gap: 2rem;
+  align-items: flex-start;
 }
 @media (min-width: 768px) {
   .principal__flexBtn {
     flex-direction: row;
     gap: 1rem;
+    align-items: center;
   }
 }
 .principal__boton {
@@ -485,8 +485,7 @@ template {
   text-align: center;
   width: 100%;
   display: inline-block;
-  margin: 2rem 19rem 0 0;
-  width: 50%;
+  width: auto;
   border-radius: 5rem;
   border: 2px solid transparent;
   transition: border, box-shadow, background-color 0.5s ease;
@@ -512,7 +511,7 @@ template {
   text-align: center;
   width: 100%;
   display: inline-block;
-  width: 50%;
+  width: auto;
   border: 2px solid transparent;
   transition: border, box-shadow, color, background-color 0.5s ease;
 }
@@ -527,18 +526,29 @@ template {
   background-color: transparent;
 }
 @media (min-width: 768px) {
+  .principal__boton--cv {
+    padding: 1.5rem 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .principal__boton--cv {
+    padding: 1.5rem 4rem;
+  }
+}
+@media (min-width: 768px) {
   .principal__boton {
     margin: 3rem 0 0 0;
   }
 }
 .principal__img {
-  width: 24rem;
-  animation: imagenEntrando 2s backwards, imagenFlotando 2s infinite 2s alternate;
+  width: 30rem;
+  animation: imagenEntrando 2s backwards;
+  background-size: 34rem;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 @media (min-width: 768px) {
   .principal__img {
     width: 34rem;
-    background-size: 34rem;
   }
 }
 
@@ -1925,7 +1935,7 @@ template {
   .header {
     justify-content: center;
     top: 2rem;
-    left: 20%;
+    left: 16%;
     width: auto;
     gap: 0;
     padding: 1;
@@ -1933,7 +1943,7 @@ template {
 }
 @media (min-width: 800px) {
   .header {
-    left: 20%;
+    left: 18%;
   }
 }
 @media (min-width: 1024px) {
