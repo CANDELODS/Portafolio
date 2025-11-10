@@ -762,11 +762,13 @@ template {
     grid-template-areas: "header header estudios" "img hb estudios" "img aprendiendo hobbies";
   }
 }
-.sobremi__eg {
-  transition: opacity 0.3s;
-}
-.sobremi__eg:hover {
-  opacity: 0.8;
+@media (min-width: 768px) {
+  .sobremi__eg {
+    transition: opacity 0.3s;
+  }
+  .sobremi__eg:hover {
+    opacity: 0.8;
+  }
 }
 .sobremi__header {
   background-color: #ffde92;
@@ -1326,11 +1328,13 @@ template {
     font-size: 2rem;
   }
 }
-.experiencia__eg {
-  transition: opacity 0.3s;
-}
-.experiencia__eg:hover {
-  opacity: 0.8;
+@media (min-width: 768px) {
+  .experiencia__eg {
+    transition: opacity 0.3s;
+  }
+  .experiencia__eg:hover {
+    opacity: 0.8;
+  }
 }
 
 .tareas__grid {

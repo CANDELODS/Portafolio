@@ -43,9 +43,11 @@
     }
 
     &__eg{
-        transition: opacity .3s;
-        &:hover{
-            opacity: .8;
+        @include m.tablet{
+            transition: opacity .3s;
+            &:hover {
+                opacity: .8;
+            }
         }
     }
 
