@@ -737,6 +737,12 @@ template {
   background-color: transparent;
 }
 
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}
+
 .sobremi {
   width: min(90%, 140rem);
   margin: 0 auto;

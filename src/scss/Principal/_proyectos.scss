@@ -114,20 +114,22 @@
             margin: .5rem 0 1rem 0;
             transition: border, box-shadow, background-color 0.5s ease;
 
-            @include m.tablet{
+            @include m.tablet {
                 padding: 1.8rem 0 1rem 0;
             }
-            
-            @include m.xl-tablet{
+
+            @include m.xl-tablet {
                 padding: 1rem 0 1rem 0;
             }
-            
-            @include m.desktop{
+
+            @include m.desktop {
                 padding: 1.7rem 0 1rem 0;
             }
-            @include m.xl-desktop{
+
+            @include m.xl-desktop {
                 padding: 1rem 1rem;
             }
+
             &:hover {
                 border: 2px solid v.$principal;
                 box-shadow: 0 0 10px v.$principal;
@@ -153,4 +155,10 @@
         }
     }
 
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
 }
