@@ -24,7 +24,7 @@
     &__grid{
         animation: revelar 1s linear both;
         @include m.grid(3,2rem);
-        grid-template-rows: 40% 15% 25%;
+        grid-template-rows: auto;
         grid-template-areas:
         "arriba arriba arriba"
         "medioi mediod abajod"
